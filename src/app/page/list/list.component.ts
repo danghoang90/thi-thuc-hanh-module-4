@@ -9,6 +9,7 @@ import {Router} from "@angular/router";
 })
 export class ListComponent implements OnInit {
   books: any[] = [];
+  count?: any;
   constructor(private bookService: BookService,
               private router: Router) { }
 
@@ -20,6 +21,7 @@ export class ListComponent implements OnInit {
     this.bookService.getAll().subscribe(res => {
       console.log(res)
      this.books = res;
+      this.count = this.books.length;
     })
   }
 
