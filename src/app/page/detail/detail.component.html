@@ -1,0 +1,26 @@
+<div class="container">
+  <div>
+    <h2>Chi Tiết Sách Sách</h2>
+    <button class="btn btn-primary" routerLink="/books" style="float: right; margin: 50px">Xem Danh Sách</button>
+  </div>
+  <form *ngIf="detailForm" [formGroup]="detailForm">
+    <div class="form-group">
+      <label >Tên Sách:</label>
+      <input type="text" class="form-control" formControlName="title"  placeholder="">
+    </div>
+    <div class="form-group">
+      <label >Tác Giả:</label>
+      <input type="text" class="form-control" formControlName="author"  placeholder="">
+    </div>
+
+    <div class="form-group">
+      <label >Mô Tả:</label>
+      <textarea class="form-control" formControlName="description" rows="3"></textarea>
+    </div>
+    <div class="text-aline: centre">
+      <button  type="submit" class="btn btn-primary" style="margin: 40px">Xoá Sách</button>
+      <button class="btn btn-warning" style="margin: 40px" routerLink="/books">Thoát</button>
+    </div>
+  </form>
+</div>
+
